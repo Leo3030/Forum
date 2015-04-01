@@ -1,0 +1,13 @@
+# forum_home_homepage:
+#     path:     /hello/{name}
+#     defaults: { _controller: ForumHomeBundle:Default:index }
+
+forum_list_listpage:
+    path:     /list
+    defaults: { _controller: ForumHomeBundle:List:index }
+forum_ask_questionpage:
+    path:     /ask
+    defaults: { _controller: ForumHomeBundle:AskQuestion:index }
+forum_answer_questionpage:
+    path:     /answer
+    defaults: { _controller: ForumHomeBundle:AnswerQuestion:index }

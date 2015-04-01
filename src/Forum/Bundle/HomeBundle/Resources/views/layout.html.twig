@@ -1,0 +1,86 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{{ _charset }}" />
+		<title>{% block title %}{% endblock %}</title>
+        <script src="{{ asset('bundles/forumhome/js/jquery-1.11.2.min.js') }}"></script>
+        <script src="{{ asset('bundles/forumhome/js/jquery-1.11.2.js') }}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/forumhome/css/layout.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/forumhome/css/font-awesome.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/forumhome/css/font-awesome.min.css') }}">
+		{% block head %}{% endblock %}
+	</head>
+	<body>
+        <!-- Header -->
+        {% set uId = app.request.cookies.get('u_id') %}
+		<div id="header">
+			<div class="page-container" id="nav">
+				<div id="logo" class="logo">
+					<a href="/" target="self"></a>
+				</div>
+				<ul class="nav-item l">
+					<li>
+                        <a href="">首页</a>    
+                    </li>
+					<li>
+                        <a href="/list">列表</a>
+                    </li>
+				</ul>
+				<div id="login-area">
+                    {% if uId is null %}
+					<ul class="header-unlogin clearfix">
+						<li class="header-signin">
+                            <a href="#" id="js-signin-btn">登录</a>
+                        </li>
+						<li class="header-signup">
+                            <a href="#" id="js-signup-btn">注册</a>
+                        </li>
+					</ul>
+                    {% else %}
+                    <a href="#" class="user-center-icon"><i class="fa fa-user"></i></a>
+                    {% endif %}
+				</div>
+				<div class="search-area">
+					<form action="/index/search" name="search-form" method="get">
+                	<input class="js-input-keyword search-input" placeholder="搜索内容" type="text" autocomplete="off" name="words" value="">
+                	<input type="button" class="btn_search js-btn-search fa fa-search">
+                	<dl class="search-area-result"></dl>
+            </form>
+				</div>
+			</div>
+		</div>
+        <div class="course-nav">
+            <ul>
+                <li><a class="ask-question" href="/ask">提出问题</a></li>
+                <li><a class="answer-question" href="/answer">回答问题</a></li>
+            </ul>
+            
+        </div>
+
+        <!-- Main content -->
+		<div class="sf-reset" id="main">
+			{% block body %}{% endblock %}
+		</div>
+        <input type="hidden" value={{ uId }} />
+        <!-- Footer -->
+        <div id="footer">
+            <div class="waper">
+                <div class="footerwaper clearfix">
+                    <div class="footer_intro">
+                        <p>This web was made by Leo Tang</p>
+                    </div><!--
+                 --><div class="followus">
+                        <a class="followus-weixin" href="javascript:;" target="_blank" title="微信">
+                            <div class="flw-weixin-box"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="js-container">
+            <script src="{{ asset('bundles/forumhome/js/layout.js') }}"></script>
+        </div>
+	</body>
+</html>

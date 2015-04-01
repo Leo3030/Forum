@@ -1,0 +1,17 @@
+Forum\Bundle\HomeBundle\Entity\Answer:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        content:
+            type: string
+            length: 255
+        createTime:
+            type: datetime
+            column: create_time
+    lifecycleCallbacks: {  }

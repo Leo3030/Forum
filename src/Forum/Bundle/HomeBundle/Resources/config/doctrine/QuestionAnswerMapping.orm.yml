@@ -1,0 +1,17 @@
+Forum\Bundle\HomeBundle\Entity\QuestionAnswerMapping:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        qId:
+            type: integer
+            column: q_id
+        aId:
+            type: integer
+            column: a_id
+    lifecycleCallbacks: {  }
