@@ -8,6 +8,6 @@ class AskQuestionController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ForumHomeBundle:AskQuestion:AskQuestion.html.twig');
+        return $this->render('ForumHomeBundle:AskQuestion:askquestion.html.twig');
     }
 }

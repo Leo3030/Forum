@@ -68,14 +68,19 @@ class __TwigTemplate_3e2e484527427b0bbc1f0109f2470e1686d3e2d0801110d9d8656a9749f
             echo twig_escape_filter($this->env, $this->getAttribute($context["question"], "id", array()), "html", null, true);
             echo "\"/>
 \t\t\t\t<div>
-\t\t\t\t\t<p>";
+\t\t\t\t\t<a href=\"/descquestion/";
             // line 14
-            echo twig_escape_filter($this->env, $this->getAttribute($context["question"], "content", array()), "html", null, true);
-            echo "</p>
-\t\t\t\t\t<p>";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["question"], "id", array()), "html", null, true);
+            echo "\">
+\t\t\t\t\t\t<span>";
             // line 15
+            echo twig_escape_filter($this->env, $this->getAttribute($context["question"], "content", array()), "html", null, true);
+            echo "</span>
+\t\t\t\t\t\t<span>";
+            // line 16
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["question"], "createTime", array()), "date", array()), "html", null, true);
-            echo "</p>
+            echo "</span>
+\t\t\t\t\t</a>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t";
@@ -83,7 +88,7 @@ class __TwigTemplate_3e2e484527427b0bbc1f0109f2470e1686d3e2d0801110d9d8656a9749f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['question'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 19
+        // line 21
         echo "\t\t</div>
 \t</div>
 ";
@@ -101,6 +106,6 @@ class __TwigTemplate_3e2e484527427b0bbc1f0109f2470e1686d3e2d0801110d9d8656a9749f
 
     public function getDebugInfo()
     {
-        return array (  87 => 19,  77 => 15,  73 => 14,  68 => 12,  65 => 11,  61 => 10,  57 => 8,  54 => 7,  48 => 5,  41 => 3,  38 => 2,  11 => 1,);
+        return array (  92 => 21,  81 => 16,  77 => 15,  73 => 14,  68 => 12,  65 => 11,  61 => 10,  57 => 8,  54 => 7,  48 => 5,  41 => 3,  38 => 2,  11 => 1,);
     }
 }

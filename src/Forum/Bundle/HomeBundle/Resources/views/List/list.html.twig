@@ -11,8 +11,10 @@
 			<div class="question-container">
 				<input type="hidden" value="{{ question.id }}"/>
 				<div>
-					<p>{{ question.content }}</p>
-					<p>{{ question.createTime.date }}</p>
+					<a href="/descquestion/{{ question.id }}">
+						<span>{{ question.content }}</span>
+						<span>{{ question.createTime.date }}</span>
+					</a>
 				</div>
 			</div>
 		{% endfor %}

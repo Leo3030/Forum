@@ -1,0 +1,17 @@
+{% extends "ForumHomeBundle::layout.html.twig" %}
+{% block head %}
+	<link rel="stylesheet" href="{{ asset('bundles/forumhome/css/home.css') }}" />
+{% endblock %}
+{% block title "Symfony - Signin" %}
+
+{% block body %}
+	<div class="main-body-container">
+		<form action="/signinajax" method="post" class="user-signin-container">
+			<input id="signin-user-name" type="text" placeholder="Please input your name" name="name">
+			<input id="signin-user-email" type="text" placeholder="Please input your email" name="email">
+			<input id="signin-user-password" type="password" placeholder="Please input your password" name="password">
+			<input id="signin-user-phone" type="text" placeholder="Please input your phone" name="phone">
+			<button type="submit" value="submit">Submit</button>
+		</form>
+	</div>
+{% endblock %}

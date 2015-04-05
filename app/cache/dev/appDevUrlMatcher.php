@@ -132,22 +132,67 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\ListController::indexAction',  '_route' => 'forum_list_listpage',);
         }
 
-        if (0 === strpos($pathinfo, '/a')) {
-            // forum_ask_questionpage
-            if ($pathinfo === '/ask') {
-                return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\AskQuestionController::indexAction',  '_route' => 'forum_ask_questionpage',);
+        // forum_home_homepage
+        if ($pathinfo === '/home') {
+            return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\HomeController::indexAction',  '_route' => 'forum_home_homepage',);
+        }
+
+        // forum_ask_questionpage
+        if ($pathinfo === '/ask') {
+            return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\AskQuestionController::indexAction',  '_route' => 'forum_ask_questionpage',);
+        }
+
+        if (0 === strpos($pathinfo, '/my')) {
+            // forum_myanswer_questionpage
+            if ($pathinfo === '/myanswer') {
+                return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\AnswerQuestionController::indexAction',  '_route' => 'forum_myanswer_questionpage',);
             }
 
-            // forum_answer_questionpage
-            if ($pathinfo === '/answer') {
-                return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\AnswerQuestionController::indexAction',  '_route' => 'forum_answer_questionpage',);
+            // forum_myask_questionpage
+            if ($pathinfo === '/myquestion') {
+                return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\MyQuestionController::indexAction',  '_route' => 'forum_myask_questionpage',);
             }
 
-            // homepage
-            if ($pathinfo === '/app/example') {
-                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
-            }
+        }
 
+        // forum_login_loginpage
+        if ($pathinfo === '/login') {
+            return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\LoginController::indexAction',  '_route' => 'forum_login_loginpage',);
+        }
+
+        // forum_signin_signinpage
+        if ($pathinfo === '/signin') {
+            return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\SigninController::indexAction',  '_route' => 'forum_signin_signinpage',);
+        }
+
+        // forum_askquestionajax_askquestionajaxpage
+        if ($pathinfo === '/askquestionajax') {
+            return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\AskQuestionAjaxController::indexAction',  '_route' => 'forum_askquestionajax_askquestionajaxpage',);
+        }
+
+        // forum_signajax_signajaxpage
+        if ($pathinfo === '/signinajax') {
+            return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\SigninAjaxController::indexAction',  '_route' => 'forum_signajax_signajaxpage',);
+        }
+
+        // forum_loginajax_loginajaxpage
+        if ($pathinfo === '/loginajax') {
+            return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\LoginAjaxController::indexAction',  '_route' => 'forum_loginajax_loginajaxpage',);
+        }
+
+        // forum_desc_questionpage
+        if (0 === strpos($pathinfo, '/descquestion') && preg_match('#^/descquestion/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'forum_desc_questionpage')), array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\QuestionController::indexAction',));
+        }
+
+        // forum_pose_answerpage
+        if (0 === strpos($pathinfo, '/postanswer') && preg_match('#^/postanswer/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'forum_pose_answerpage')), array (  '_controller' => 'ForumHomeBundle:PostAnswer:index',));
+        }
+
+        // homepage
+        if ($pathinfo === '/app/example') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

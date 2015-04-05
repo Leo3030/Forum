@@ -24,6 +24,11 @@ class Question
      */
     private $createTime;
 
+    /**
+     * @var integer
+     */
+    private $uId;
+
 
     /**
      * Get id
@@ -79,5 +84,28 @@ class Question
     public function getCreateTime()
     {
         return $this->createTime;
+    }
+
+    /**
+     * Set uId
+     *
+     * @param integer $uId
+     * @return Question
+     */
+    public function setUId($uId)
+    {
+        $this->uId = $uId;
+
+        return $this;
+    }
+
+    /**
+     * Get uId
+     *
+     * @return integer 
+     */
+    public function getUId()
+    {
+        return $this->uId;
     }
 }

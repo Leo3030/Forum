@@ -14,4 +14,10 @@ Forum\Bundle\HomeBundle\Entity\Answer:
         createTime:
             type: datetime
             column: create_time
+        uId:
+            type: integer
+            column: u_id
+        qId:
+            type: integer
+            column: q_id
     lifecycleCallbacks: {  }

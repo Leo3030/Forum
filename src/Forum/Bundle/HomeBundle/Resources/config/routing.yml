@@ -2,12 +2,40 @@
 #     path:     /hello/{name}
 #     defaults: { _controller: ForumHomeBundle:Default:index }
 
+
 forum_list_listpage:
     path:     /list
     defaults: { _controller: ForumHomeBundle:List:index }
+forum_home_homepage:
+    path:     /home
+    defaults: { _controller: ForumHomeBundle:Home:index }
 forum_ask_questionpage:
     path:     /ask
     defaults: { _controller: ForumHomeBundle:AskQuestion:index }
-forum_answer_questionpage:
-    path:     /answer
+forum_myanswer_questionpage:
+    path:     /myanswer
     defaults: { _controller: ForumHomeBundle:AnswerQuestion:index }
+forum_myask_questionpage:
+    path:     /myquestion
+    defaults: { _controller: ForumHomeBundle:MyQuestion:index }
+forum_login_loginpage:
+    path:     /login
+    defaults: { _controller: ForumHomeBundle:Login:index }
+forum_signin_signinpage:
+    path:     /signin
+    defaults: { _controller: ForumHomeBundle:Signin:index }
+forum_askquestionajax_askquestionajaxpage:
+    path:     /askquestionajax
+    defaults: { _controller: ForumHomeBundle:AskQuestionAjax:index }
+forum_signajax_signajaxpage:
+    path:     /signinajax
+    defaults: { _controller: ForumHomeBundle:SigninAjax:index }
+forum_loginajax_loginajaxpage:
+    path:     /loginajax
+    defaults: { _controller: ForumHomeBundle:LoginAjax:index }
+forum_desc_questionpage:
+    path:     /descquestion/{id}
+    defaults: { _controller: ForumHomeBundle:Question:index }
+forum_pose_answerpage:
+    path:     /postanswer/{id}
+    defaults: { _controller: ForumHomeBundle:PostAnswer:index }

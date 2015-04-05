@@ -39,7 +39,7 @@ class __TwigTemplate_96c380bb47f493422d6da5744c999d7a9d7d3eb526923879e0b839bc00a
     {
         // line 3
         echo "\t<link rel=\"stylesheet\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/forumhome/css/home.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/forumhome/css/ask.css"), "html", null, true);
         echo "\" />
 ";
     }
@@ -55,7 +55,11 @@ class __TwigTemplate_96c380bb47f493422d6da5744c999d7a9d7d3eb526923879e0b839bc00a
     {
         // line 8
         echo "\t<div class=\"main-body-container\">
-
+        <form class=\"ask-question\" action=\"/askquestionajax\" type=\"post\">
+            <h1>Ask Question</h1>
+            <input class=\"input-question\" placehold=\"Please input question\">
+            <button>submit</button>
+        </form>
 \t</div>
 ";
     }

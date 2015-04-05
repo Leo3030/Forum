@@ -17,9 +17,6 @@ Forum\Bundle\HomeBundle\Entity\User:
         phone:
             type: string
             length: 255
-        photo:
-            type: string
-            length: 255
         password:
             type: string
             length: 255

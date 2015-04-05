@@ -1,0 +1,27 @@
+#Doctrine
+/src/Osl/BookingBundle/Resources/config/doctrine/
+
+# Cache and logs
+/app/cache/*
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+
+# Managed
+/app/bootstrap.php.cache
+/bin/
+/vendor/
+/artefacts/
+
+# Parameters
+/app/config/parameters.yml
+/app/config/parameters.ini
+/app/config/parameters.speedbird.yml
+
+# Assets and user uploads
+/web/bundles/
+/web/uploads/
+/web/css/
+/web/js/
+/web/assets/
+/app/Resources/assets/vendor/

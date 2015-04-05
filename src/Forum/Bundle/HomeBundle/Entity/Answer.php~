@@ -24,6 +24,16 @@ class Answer
      */
     private $createTime;
 
+    /**
+     * @var integer
+     */
+    private $uId;
+
+    /**
+     * @var integer
+     */
+    private $qId;
+
 
     /**
      * Get id
@@ -79,5 +89,51 @@ class Answer
     public function getCreateTime()
     {
         return $this->createTime;
+    }
+
+    /**
+     * Set uId
+     *
+     * @param integer $uId
+     * @return Answer
+     */
+    public function setUId($uId)
+    {
+        $this->uId = $uId;
+
+        return $this;
+    }
+
+    /**
+     * Get uId
+     *
+     * @return integer 
+     */
+    public function getUId()
+    {
+        return $this->uId;
+    }
+
+    /**
+     * Set qId
+     *
+     * @param integer $qId
+     * @return Answer
+     */
+    public function setQId($qId)
+    {
+        $this->qId = $qId;
+
+        return $this;
+    }
+
+    /**
+     * Get qId
+     *
+     * @return integer 
+     */
+    public function getQId()
+    {
+        return $this->qId;
     }
 }

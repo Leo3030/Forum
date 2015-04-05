@@ -32,17 +32,15 @@ class User
     /**
      * @var string
      */
-    private $photo;
-
-    /**
-     * @var string
-     */
     private $password;
 
     /**
      * @var integer
      */
     private $permission;
+
+    const EUM_GUEST_PERMISSION = 1;
+    const EUM_ADMIN_PERMISSION = 2;
 
     /**
      * @var \DateTime
@@ -132,29 +130,6 @@ class User
     public function getPhone()
     {
         return $this->phone;
-    }
-
-    /**
-     * Set photo
-     *
-     * @param string $photo
-     * @return User
-     */
-    public function setPhoto($photo)
-    {
-        $this->photo = $photo;
-
-        return $this;
-    }
-
-    /**
-     * Get photo
-     *
-     * @return string 
-     */
-    public function getPhoto()
-    {
-        return $this->photo;
     }
 
     /**
