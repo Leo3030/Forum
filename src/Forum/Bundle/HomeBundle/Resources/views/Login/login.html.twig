@@ -1,15 +1,21 @@
 {% extends "ForumHomeBundle::layout.html.twig" %}
 {% block head %}
-	<link rel="stylesheet" href="{{ asset('bundles/forumhome/css/home.css') }}" />
+	<link rel="stylesheet" href="{{ asset('bundles/forumhome/css/login.css') }}" />
 {% endblock %}
 {% block title "Symfony - Login" %}
 
 {% block body %}
 	<div class="main-body-container">
 		<form method="post" class="user-login-container" action="/loginajax">
-			<input name="name" type="text" placeholder="Please input your name" class="user-login-name"/>
-			<input name="password" type="password" placeholder="Please input your password" class="user-login-password"/>
-			<button class="user-login-btn">Submit</button>
+			<div>
+				<h1>Username:</h1>
+			</div>
+			<input name="name" type="text" placeholder="Please input your name" class="user-login-name form-control"/>
+			<div>
+				<h1>Password:</h1>
+			</div>
+			<input name="password" type="password" placeholder="Please input your password" class="user-login-password form-control"/>
+			<button class="user-login-btn btn btn-default">Submit</button>
 		</form>
 	</div>
 {% endblock %}

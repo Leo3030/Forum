@@ -1,0 +1,27 @@
+.question-list-container {
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+.question-title {
+	border-bottom: 1px solid #656e73;
+	margin: 0px;
+}
+.row {
+	margin: 0px;
+}
+.question-container {
+	position: relative;
+	height: 37px;
+	border-bottom: 1px solid gray;
+}
+.question-container:hover {
+	background: gray;
+}
+.question-container:last-child {
+	position: relative;
+	border-bottom: none;
+}
+.question-content-container,.question-time-container {
+	height: 37px;
+	line-height: 37px;
+}

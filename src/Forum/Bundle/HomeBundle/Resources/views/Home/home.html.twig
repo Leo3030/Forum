@@ -6,6 +6,82 @@
 
 {% block body %}
 	<div class="main-body-container">
-		this is homepage
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+		    <div class="item active">
+		      {# <img src="{{ asset('bundles/forumhome/images/mvc.jpg') }}" alt="pic1" height="100"> #}
+		      <div class="carousel-caption">
+		        <h3>MVC</h3>
+		        <p>What is MVC?</p>
+		        <p>MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。MVC被独特的发展起来用于映射传统的输入、处理和输出功能在一个逻辑的图形化用户界面的结构中。</p>
+		      </div>
+		    </div>
+		    <div class="item">
+		      {# <img src="{{ asset('bundles/forumhome/images/download') }}" alt="pic2"> #}
+		      <div class="carousel-caption">
+		        <h3>Route</h3>
+		        <p>What is route?</p>
+		        <p></p>
+		      </div>
+		    </div>
+		    <div class="item">
+		      {# <img src="{{ asset('bundles/forumhome/images/download') }}" alt="pic3"> #}
+		      <div class="carousel-caption">
+		        <h3>Controller</h3>
+		        <p>通常控制器负责从视图读取数据，控制用户输入，并向模型发送数据。</p>
+		      </div>
+		    </div>
+		    <div class="item">
+		      {# <img src="{{ asset('bundles/forumhome/images/download') }}" alt="pic4"> #}
+		      <div class="carousel-caption">
+		        <h3>Model</h3>
+		        <p>通常模型对象负责在数据库中存取数据。</p>
+		      </div>
+		    </div>
+		    <div class="item">
+		      {# <img src="{{ asset('bundles/forumhome/images/download') }}" alt="pic5"> #}
+		      <div class="carousel-caption">
+		        <h3>View</h3>
+		        <p>通常视图是依据模型数据创建的。</p>
+		      </div>
+		    </div>
+		    <div class="item">
+		      <img src="{{ asset('bundles/forumhome/images/symfony_black_01.png') }}" alt="pic6" width="800">
+		      <div class="carousel-caption">
+		        <h3>Symfony</h3>
+		        <p>What is Symfony?</p>
+		      </div>
+		    </div>
+		    <div class="item">
+		      <img src="{{ asset('bundles/forumhome/images/the-end.png') }}" alt="pic6">
+		      <div class="carousel-caption">
+		        <h3>The End</h3>
+		        <p>Then i will show how Symfony work.</p>
+		      </div>
+		    </div>
+		  </div>
+
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
 	</div>
 {% endblock %}

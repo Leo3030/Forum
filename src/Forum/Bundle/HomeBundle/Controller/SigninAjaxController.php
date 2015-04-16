@@ -15,6 +15,8 @@ class SigninAjaxController extends Controller
         $phone = $this->get('request')->request->get('phone');
         $password = $this->get('request')->request->get('password');
         
+        if (empty($password) || empty($phone) || empty($email) ||empty($name)) return $this->render('ForumHomeBundle:Signin:signin.html.twig');
+
         $ret = $this->check_username($name);
         if ($ret) {
             $this->create_new_user($name, $email, $phone, $password);

@@ -39,3 +39,6 @@ forum_desc_questionpage:
 forum_pose_answerpage:
     path:     /postanswer/{id}
     defaults: { _controller: ForumHomeBundle:PostAnswer:index }
+forum_search_questionpage:
+    path:     /search
+    defaults: { _controller: ForumHomeBundle:Search:index }

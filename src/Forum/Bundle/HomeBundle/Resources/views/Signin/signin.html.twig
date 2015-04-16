@@ -1,17 +1,29 @@
 {% extends "ForumHomeBundle::layout.html.twig" %}
 {% block head %}
-	<link rel="stylesheet" href="{{ asset('bundles/forumhome/css/home.css') }}" />
+	<link rel="stylesheet" href="{{ asset('bundles/forumhome/css/login.css') }}" />
 {% endblock %}
 {% block title "Symfony - Signin" %}
 
 {% block body %}
 	<div class="main-body-container">
 		<form action="/signinajax" method="post" class="user-signin-container">
-			<input id="signin-user-name" type="text" placeholder="Please input your name" name="name">
-			<input id="signin-user-email" type="text" placeholder="Please input your email" name="email">
-			<input id="signin-user-password" type="password" placeholder="Please input your password" name="password">
-			<input id="signin-user-phone" type="text" placeholder="Please input your phone" name="phone">
-			<button type="submit" value="submit">Submit</button>
+			<div>
+				<h1>Username:</h1>
+			</div>
+			<input id="signin-user-name" type="text" class="form-control" placeholder="Please input your name" name="name">
+			<div>
+				<h1>Email:</h1>
+			</div>
+			<input id="signin-user-email" class="form-control" type="text" placeholder="Please input your email" name="email">
+			<div>
+				<h1>Password:</h1>
+			</div>
+			<input id="signin-user-password" type="password" class="form-control" placeholder="Please input your password" name="password">
+			<div>
+				<h1>Phone:</h1>
+			</div>
+			<input id="signin-user-phone" type="text" placeholder="Please input your phone" class="form-control" name="phone">
+			<button type="submit" value="submit" class="user-login-btn btn btn-default">Submit</button>
 		</form>
 	</div>
 {% endblock %}

@@ -1,21 +1,22 @@
 {% extends "ForumHomeBundle::layout.html.twig" %}
 {% block head %}
-	<link rel="stylesheet" href="{{ asset('bundles/forumhome/css/home.css') }}" />
+	<link rel="stylesheet" href="{{ asset('bundles/forumhome/css/answer-question.css') }}" />
+	<link rel="stylesheet" href="{{ asset('bundles/forumhome/css/list.css') }}" />
 {% endblock %}
 {% block title "Symfony - MyQuestion" %}
 {% block body %}
 	<div class="main-body-container">
 		<div class="question-list-container">
-			<div class="question-container">
-				<span>{{ question.content }}</span>
-				<span>{{ question.createTime.date }}</span>
+			<div class="question-main-container row">
+				<div class="question-content-container col-md-8">{{ question.content }}</div>
+				<div class="question-time-container col-md-4">{{ question.createTime.date }}</div>
 			</div>
 			{% for answer in arr_answers %}
-				<div class="answer-container">
+				<div class="question-container">
 					<input type="hidden" value="{{ answer.id }}"/>
-					<div>
-							<span>{{ answer.content }}</span>
-							<span>{{ answer.createTime.date }}</span>
+					<div class="row"> 
+							<div class="question-content-container col-md-8">{{ answer.content }}</div>
+							<div class="question-time-container col-md-4">{{ answer.createTime.date }}</div>
 					</div>
 				</div>
 			{% endfor %}
@@ -23,8 +24,8 @@
 		{% if uId %}
 			<div class="answer-question-container">
 				<form class="answer-question" method="post" action="/postanswer/{{ question.id }}">
-					<textarea type="textarea" name="content" placeholder="please input your answer"></textarea>
-					<button type="submit" name="submit">Sudmit</button>
+					<textarea type="textarea" class="form-control" name="content" placeholder="please input your answer"></textarea>
+					<button type="submit" class="btn btn-primary btn-lg answer-question-btn" name="submit">Sudmit</button>
 				</form>
 			</div>
 		{% endif %}

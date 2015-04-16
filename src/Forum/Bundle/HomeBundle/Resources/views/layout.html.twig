@@ -2,12 +2,21 @@
 <html>
 	<head>
 		<meta charset="{{ _charset }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{% block title %}{% endblock %}</title>
         <script src="{{ asset('bundles/forumhome/js/jquery-1.11.2.min.js') }}"></script>
+        <script src="{{ asset('bundles/forumhome/js/bootstrap.js') }}"></script>
+        <script src="{{ asset('bundles/forumhome/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/forumhome/js/npm.js') }}"></script>
         <script src="{{ asset('bundles/forumhome/js/jquery-1.11.2.js') }}"></script>
         <script src="{{ asset('bundles/forumhome/js/layout.js') }}"></script>
 		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/forumhome/css/layout.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('bundles/forumhome/css/font-awesome.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/forumhome/css/bootstrap-theme.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/forumhome/css/bootstrap-theme.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/forumhome/css/bootstrap-theme.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/forumhome/css/bootstrap.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/forumhome/css/bootstrap.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('bundles/forumhome/css/font-awesome.min.css') }}">
 		{% block head %}{% endblock %}
 	</head>
@@ -59,10 +68,12 @@
             </div
         {% endif %}
         <!-- Main content -->
-		<div class="sf-reset" id="main">
+		
+        <div class="sf-reset container" id="main">
 			{% block body %}{% endblock %}
 		</div>
         <input type="hidden" value={{ uId }} />
+
         <!-- Footer -->
         <div id="footer">
             <div class="waper">

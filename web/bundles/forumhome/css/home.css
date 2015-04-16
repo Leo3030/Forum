@@ -3,3 +3,14 @@
 	max-width: 980px;
 	margin: 0 auto;
 }
+.carousel-inner {
+	height: 500px;
+	background-color: gray;
+}
+.carousel-inner div.item {
+	height: 100%;
+	width: 100%;
+}
+.carousel-inner div.item img {
+	margin: 0 auto;
+}

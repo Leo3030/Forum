@@ -187,7 +187,12 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         // forum_pose_answerpage
         if (0 === strpos($pathinfo, '/postanswer') && preg_match('#^/postanswer/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'forum_pose_answerpage')), array (  '_controller' => 'ForumHomeBundle:PostAnswer:index',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'forum_pose_answerpage')), array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\PostAnswerController::indexAction',));
+        }
+
+        // forum_search_questionpage
+        if ($pathinfo === '/search') {
+            return array (  '_controller' => 'Forum\\Bundle\\HomeBundle\\Controller\\SearchController::indexAction',  '_route' => 'forum_search_questionpage',);
         }
 
         // homepage

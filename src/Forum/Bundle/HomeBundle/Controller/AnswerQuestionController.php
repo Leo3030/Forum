@@ -26,7 +26,7 @@ class AnswerQuestionController extends Controller
 		if (!empty($arr_answer)) {
 			foreach ($arr_answer as $key => $dbo) {
 				$qId = $dbo->getQId();
-				$arr_questions = $this->getDoctrine()->getRepository('ForumHomeBundle:Question')
+				$arr_questions[$key] = $this->getDoctrine()->getRepository('ForumHomeBundle:Question')
 				->findBy(array('id' => $qId));		
 			}
 			if (!empty($arr_questions)) {

@@ -1,20 +1,28 @@
 {% extends "ForumHomeBundle::layout.html.twig" %}
 {% block head %}
-	<link rel="stylesheet" href="{{ asset('bundles/forumhome/css/home.css') }}" />
+	<link rel="stylesheet" href="{{ asset('bundles/forumhome/css/list.css') }}" />
 {% endblock %}
 {% block title "Symfony - Forum" %}
 
 {% block body %}
 	<div class="main-body-container">
 		<div class="question-list-container">
+			<div class="row question-title">
+				<div class="col-md-8"><h3>Question</h3></div>
+				<div class="col-md-4"><h3>Time</h3 ></div>
+			</div>
 		{% for question in arr_questions %}
 			<div class="question-container">
 				<input type="hidden" value="{{ question.id }}"/>
-				<div>
-					<a href="/descquestion/{{ question.id }}">
-						<span>{{ question.content }}</span>
-						<span>{{ question.createTime.date }}</span>
-					</a>
+				<div class="row">
+					<a href="/descquestion/{{ question.id }}" class="question-href-container">
+						<div class="question-content-container col-md-8">
+							
+								{{ question.content }}
+							
+						</div>
+						<div class="question-time-container col-md-4">{{ question.createTime.date }}</div>
+					</a>	
 				</div>
 			</div>
 		{% endfor %}
