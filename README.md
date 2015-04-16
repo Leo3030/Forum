@@ -17,5 +17,5 @@ If you want to start the website.
 
 Enjoy it by yourself!
 
-[1]:  http://symfony.com/doc/2.6/book/installation.html
+[1]:  https://www.apachefriends.org/index.html
 
