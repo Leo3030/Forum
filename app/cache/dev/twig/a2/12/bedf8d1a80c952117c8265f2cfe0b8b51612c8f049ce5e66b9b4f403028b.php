@@ -65,13 +65,23 @@ class __TwigTemplate_a212bedf8d1a80c952117c8265f2cfe0b8b51612c8f049ce5e66b9b4f40
 \t\t    <li data-target=\"#carousel-example-generic\" data-slide-to=\"4\"></li>
 \t\t    <li data-target=\"#carousel-example-generic\" data-slide-to=\"5\"></li>
 \t\t    <li data-target=\"#carousel-example-generic\" data-slide-to=\"6\"></li>
+\t\t    <li data-target=\"#carousel-example-generic\" data-slide-to=\"7\"></li>
 \t\t  </ol>
 
 \t\t  <!-- Wrapper for slides -->
 \t\t  <div class=\"carousel-inner\" role=\"listbox\">
 \t\t    <div class=\"item active\">
 \t\t      ";
-        // line 25
+        // line 26
+        echo "\t\t      <div class=\"carousel-caption\">
+\t\t        <h3>框架</h3>
+\t\t        <p>框架是程序结构代码的集合，而不是业务逻辑代码，集合中包括了许多类，函数和功能类包。这个集合是按照一定标准组成的功能体系。</p>
+\t\t        <p></p>
+\t\t      </div>
+\t\t    </div>
+\t\t    <div class=\"item\">
+\t\t      ";
+        // line 34
         echo "\t\t      <div class=\"carousel-caption\">
 \t\t        <h3>MVC</h3>
 \t\t        <p>What is MVC?</p>
@@ -80,7 +90,7 @@ class __TwigTemplate_a212bedf8d1a80c952117c8265f2cfe0b8b51612c8f049ce5e66b9b4f40
 \t\t    </div>
 \t\t    <div class=\"item\">
 \t\t      ";
-        // line 33
+        // line 42
         echo "\t\t      <div class=\"carousel-caption\">
 \t\t        <h3>Route</h3>
 \t\t        <p>What is route?</p>
@@ -89,7 +99,7 @@ class __TwigTemplate_a212bedf8d1a80c952117c8265f2cfe0b8b51612c8f049ce5e66b9b4f40
 \t\t    </div>
 \t\t    <div class=\"item\">
 \t\t      ";
-        // line 41
+        // line 50
         echo "\t\t      <div class=\"carousel-caption\">
 \t\t        <h3>Controller</h3>
 \t\t        <p>通常控制器负责从视图读取数据，控制用户输入，并向模型发送数据。</p>
@@ -97,7 +107,7 @@ class __TwigTemplate_a212bedf8d1a80c952117c8265f2cfe0b8b51612c8f049ce5e66b9b4f40
 \t\t    </div>
 \t\t    <div class=\"item\">
 \t\t      ";
-        // line 48
+        // line 57
         echo "\t\t      <div class=\"carousel-caption\">
 \t\t        <h3>Model</h3>
 \t\t        <p>通常模型对象负责在数据库中存取数据。</p>
@@ -105,7 +115,7 @@ class __TwigTemplate_a212bedf8d1a80c952117c8265f2cfe0b8b51612c8f049ce5e66b9b4f40
 \t\t    </div>
 \t\t    <div class=\"item\">
 \t\t      ";
-        // line 55
+        // line 64
         echo "\t\t      <div class=\"carousel-caption\">
 \t\t        <h3>View</h3>
 \t\t        <p>通常视图是依据模型数据创建的。</p>
@@ -113,7 +123,7 @@ class __TwigTemplate_a212bedf8d1a80c952117c8265f2cfe0b8b51612c8f049ce5e66b9b4f40
 \t\t    </div>
 \t\t    <div class=\"item\">
 \t\t      <img src=\"";
-        // line 61
+        // line 70
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/forumhome/images/symfony_black_01.png"), "html", null, true);
         echo "\" alt=\"pic6\" width=\"800\">
 \t\t      <div class=\"carousel-caption\">
@@ -123,7 +133,7 @@ class __TwigTemplate_a212bedf8d1a80c952117c8265f2cfe0b8b51612c8f049ce5e66b9b4f40
 \t\t    </div>
 \t\t    <div class=\"item\">
 \t\t      <img src=\"";
-        // line 68
+        // line 77
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/forumhome/images/the-end.png"), "html", null, true);
         echo "\" alt=\"pic6\">
 \t\t      <div class=\"carousel-caption\">
@@ -159,6 +169,6 @@ class __TwigTemplate_a212bedf8d1a80c952117c8265f2cfe0b8b51612c8f049ce5e66b9b4f40
 
     public function getDebugInfo()
     {
-        return array (  127 => 68,  117 => 61,  109 => 55,  101 => 48,  93 => 41,  84 => 33,  75 => 25,  57 => 8,  54 => 7,  48 => 5,  41 => 3,  38 => 2,  11 => 1,);
+        return array (  137 => 77,  127 => 70,  119 => 64,  111 => 57,  103 => 50,  94 => 42,  85 => 34,  76 => 26,  57 => 8,  54 => 7,  48 => 5,  41 => 3,  38 => 2,  11 => 1,);
     }
 }
